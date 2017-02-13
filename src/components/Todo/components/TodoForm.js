@@ -1,11 +1,11 @@
 import React from 'react';
 import './TodoForm.less';
 
-export const TodoForm = ({ todoText, onTextChange, onClickAdd }) => {
+export const TodoForm = ({ todoText, onTextChange, onClickAdd, t }) => {
     return (
         <div className="todo-form">
             <input type="text" value={todoText} onChange={onTextChange} />
-            <button onClick={onClickAdd}>Add Todo</button>
+            <button onClick={onClickAdd}>{t('add_todo')}</button>
         </div>
     );
 };

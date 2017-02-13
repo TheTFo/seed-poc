@@ -37,12 +37,14 @@ export class TodoPage extends React.Component {
     render() {
         return (
             <div className="todo-page">
-                <h2>Todo List</h2>
-                <TodoForm 
+                <h2>{this.props.t('todo_list')}</h2>
+                <TodoForm
+                    t={this.props.t}
                     todoText={this.state.todoText}
                     onTextChange={this.onTextChange}
                     onClickAdd={this.onClickAdd} />
                 <TodoList
+                    t={this.props.t}
                     todos={this.props.todos}
                     onClickClear={this.props.clearAll}
                     onClickDone={this.onClickDone} />
